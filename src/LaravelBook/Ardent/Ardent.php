@@ -18,7 +18,7 @@ use Illuminate\Support\MessageBag;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Model;
 use Illuminate\Support\Str;
 use Illuminate\Validation\DatabasePresenceVerifier;
 use Illuminate\Validation\Factory as ValidationFactory;
