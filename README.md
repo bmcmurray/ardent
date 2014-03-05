@@ -1,6 +1,6 @@
 #Ardent
 
-Self-validating smart models for Laravel Framework 4's Eloquent O/RM.
+Self-validating smart models for Laravel Framework 4's Eloquent O/RM that works with jenssegers/mongodb.
 
 Based on the Aware bundle for Laravel 3 by Colby Rabideau.
 
@@ -8,15 +8,26 @@ Copyright (C) 2013 Max Ehsan <[http://laravelbook.com/](http://laravelbook.com/)
 
 ## Installation
 
-Add `laravelbook/ardent` as a requirement to `composer.json`:
+Add `bmcmurray/ardent-mongodb` as a requirement to `composer.json`:
 
 ```javascript
 {
     "require": {
-        "laravelbook/ardent": "dev-master"
-    }
+        "bmcmurray/ardent-mongodb": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bmcmurray/ardent-mongodb"
+        }
+    ]
 }
 ```
+
+Content below here has not been updated and may be inaccurate.
+---------------
+
+
 
 Update your packages with `composer update` or install with `composer install`.
 
