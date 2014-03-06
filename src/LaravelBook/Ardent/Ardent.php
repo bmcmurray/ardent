@@ -182,6 +182,10 @@ abstract class Ardent extends Model {
 
     const MORPH_MANY = 'morphMany';
 
+    const EMBEDS_ONE = 'embedsOne';
+
+    const EMBEDS_MANY = 'embedsMany';
+
     /**
      * Array of relations used to verify arguments used in the {@link $relationsData}
      *
@@ -190,7 +194,8 @@ abstract class Ardent extends Model {
     protected static $relationTypes = array(
         self::HAS_ONE, self::HAS_MANY,
         self::BELONGS_TO, self::BELONGS_TO_MANY,
-        self::MORPH_TO, self::MORPH_ONE, self::MORPH_MANY
+        self::MORPH_TO, self::MORPH_ONE, self::MORPH_MANY,
+        self::EMBEDS_ONE, self::EMBEDS_MANY,
     );
 
     /**
@@ -333,6 +338,10 @@ abstract class Ardent extends Model {
             case self::MORPH_MANY:
                 $verifyArgs(array('type', 'id'), array('name'));
                 return $this->$relationType($relation[1], $relation['name'], $relation['type'], $relation['id']);
+
+            case self::EMBEDS_ONE:
+            case self::EMBEDS_MANY:
+                return $this->$relationType($relation[1]);
         }
     }
 
